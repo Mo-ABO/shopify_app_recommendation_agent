@@ -67,7 +67,7 @@ python data/data_index.py
 ```
 This script loads the CSV files, enriches the app data with category information, and indexes the resulting dataset in a persistent Chroma database located at `./chroma_db`.
 
---
+---
 
 ### **Running the API**
 
@@ -78,7 +78,7 @@ uvicorn app.main:app --reload
 ```
 Your API will be available at `http://127.0.0.1:8000`, and you can access the interactive Swagger UI at `http://127.0.0.1:8000/docs` or `http://127.0.0.1:8000/redoc`.
 
---
+---
 
 ### **Testing**
 
@@ -87,7 +87,7 @@ You can run automated tests without starting the server using FastAPI's TestClie
 ```sh
 python tests/test_api.py
 ```
---
+---
 
 ### **Technologies and Rationale**
 This project is built with:
@@ -98,4 +98,5 @@ This project is built with:
 - **Chroma**: A lightweight, Python-native vector database for semantic search.
 - **JWT (PyJWT)**: Implements secure authentication for API endpoints.
 - **Pandas**: Used for efficient data processing and merging CSV files.
---
+
+---
