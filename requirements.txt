@@ -1,0 +1,12 @@
+PyJWT
+uvicorn
+pydantic
+openai
+langchain
+chromadb
+fastapi
+pandas
+langchain-community
+python-multipart
+tiktoken
+pydantic-settings
