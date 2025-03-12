@@ -49,6 +49,8 @@ Below is a diagram illustrating how a user query is processed by the system:
 
 First **make sure to get** `OPENAI_API_KEY` and put it into the docker run command as below:
 
+(Also it is notable that .env file is added to this repo only for a better clarification)
+
 ```sh
 docker pull mohammada130/spoki
 sudo docker run -p 80:80 -e OPENAI_API_KEY=<PLEASE PUT YOUR OPENAI_API_KEY HERE> mohammada130/spoki
