@@ -47,9 +47,8 @@ Below is a diagram illustrating how a user query is processed by the system:
 
 ## **Installation**
 
-First **make sure to edit** `.env` file with apropriate `OPENAI_API_KEY`.
-[link](doc:linking-to-pages#anchor-links)
-The suggested approach is to use docker image which is uploaded in dockerhub.
+First **make sure to edit** `.env` file with apropriate `OPENAI_API_KEY` or use docker image which is uploaded in dockerhub as following.
+
 ```sh
 docker pull mohammada130/spoki
 sudo docker run -p 80:80 -e OPENAI_API_KEY=<PLEASE PUT YOUR OPENAI_API_KEY HERE> mohammada130/spoki
@@ -80,10 +79,10 @@ Create a file named `.env` in the project root with the following content:
 
 ```sh
 OPENAI_API_KEY=YourOpenAIKey
-SECRET_KEY=your_secret_key
+SECRET_KEY=n9L2sJ6XzQ7fJYBvWm3KpXg4TzNcRqV8HsLdPz5MfC2WyGdBhX
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
-DB_PATH=./chroma_db
+DB_PATH=../chroma_db
 PORT=8000
 ```
 
