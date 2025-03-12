@@ -47,10 +47,18 @@ Below is a diagram illustrating how a user query is processed by the system:
 
 ## **Installation**
 
+First **make sure to edit** `.env` file with apropriate `OPENAI_API_KEY`.
+[link](doc:linking-to-pages#anchor-links)
+The suggested approach is to use docker image which is uploaded in dockerhub.
+```sh
+docker pull mohammada130/spoki
+sudo docker run -p 80:80 -e OPENAI_API_KEY=<PLEASE PUT YOUR OPENAI_API_KEY HERE> mohammada130/spoki
+```
+Also you can use the following method.
 **1. Clone the Repository:**
 
 ```sh
-git clone <repository_url>
+git clone https://github.com/Mo-ABO/shopify_app_recommendation_agent.git
 cd shopify_app_recommendation_agent
 ```
 
@@ -59,14 +67,6 @@ cd shopify_app_recommendation_agent
 ```sh
 python3 -m venv env
 source env/bin/activate
-```
-
-**1. Clone the Repository:**
-
-```sh
-git clone <repository_url>
-cd shopify_app_recommendation_agent
-
 ```
 
 **3. Install Dependencies:**

@@ -11,7 +11,8 @@ import os
 
 from langchain.chains import SequentialChain
 
-os.environ["OPENAI_API_KEY"] = s.openai_api_key
+if not os.environ["OPENAI_API_KEY"]:
+    os.environ["OPENAI_API_KEY"] = s.openai_api_key
 
 # summarization chain
 def generate_summarization_chain():

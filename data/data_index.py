@@ -6,7 +6,8 @@ from config import settings as s
 from langchain.embeddings import OpenAIEmbeddings
 import os
 
-os.environ["OPENAI_API_KEY"] = s.openai_api_key 
+if not os.environ["OPENAI_API_KEY"]:
+    os.environ["OPENAI_API_KEY"] = s.openai_api_key
 
 def load_data(dir_path: str) -> pd.DataFrame:
     apps_df = pd.read_csv(os.path.join(dir_path,'apps.csv'))

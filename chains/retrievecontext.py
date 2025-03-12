@@ -6,7 +6,8 @@ import chromadb
 from config import settings as s
 import os
 
-os.environ["OPENAI_API_KEY"] = s.openai_api_key
+if not os.environ["OPENAI_API_KEY"]:
+    os.environ["OPENAI_API_KEY"] = s.openai_api_key
     
 class RetrievalChain(Chain):
     """custom chain that retrieves raw context from Chroma DB using a query."""
