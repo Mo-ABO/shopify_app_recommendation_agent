@@ -2,7 +2,7 @@
 
 The Shopify App Recommendation Agent is an AI-powered **REST API** designed to help find the best apps for business needs. It leverages a multi-step **Retrieval-Augmented Generation (RAG)** pipeline using **LangChain** to combine semantic search (via **Chroma**) with natural language generation (via **OpenAI**). **JWT-based** authentication secures the API endpoints.
 
-## ** Project Structure & Architecture**
+## **Project Structure & Architecture**
 
 ```sh
 project_root/
@@ -57,6 +57,7 @@ sudo docker run -p 80:80 -e OPENAI_API_KEY=<PLEASE PUT YOUR OPENAI_API_KEY HERE>
 ```
 
 ---
+
 ### **Data Indexing**
 
 To process and index the data (merging app and category information), run:
@@ -67,6 +68,7 @@ python data/data_index.py
 This script loads the CSV files, enriches the app data with category information, and indexes the resulting dataset in a persistent Chroma database located at `./chroma_db`.
 
 --
+
 ### **Running the API**
 
 Start the FastAPI server using Uvicorn:
@@ -77,6 +79,7 @@ uvicorn app.main:app --reload
 Your API will be available at `http://127.0.0.1:8000`, and you can access the interactive Swagger UI at `http://127.0.0.1:8000/docs` or `http://127.0.0.1:8000/redoc`.
 
 --
+
 ### **Testing**
 
 You can run automated tests without starting the server using FastAPI's TestClient. From the project root run:
@@ -85,6 +88,7 @@ You can run automated tests without starting the server using FastAPI's TestClie
 python tests/test_api.py
 ```
 --
+
 ### **Technologies and Rationale**
 This project is built with:
 
