@@ -45,45 +45,13 @@ Below is a diagram illustrating how a user query is processed by the system:
 
 ---
 
-## **Installation**
+## **How to Run**
 
-First **make sure to edit** `.env` file with apropriate `OPENAI_API_KEY` or use docker image which is uploaded in dockerhub as following.
+First **make sure to get** `OPENAI_API_KEY` and put it into the docker run command as below:
 
 ```sh
 docker pull mohammada130/spoki
 sudo docker run -p 80:80 -e OPENAI_API_KEY=<PLEASE PUT YOUR OPENAI_API_KEY HERE> mohammada130/spoki
-```
-Also you can use the following method.
-**1. Clone the Repository:**
-
-```sh
-git clone https://github.com/Mo-ABO/shopify_app_recommendation_agent.git
-cd shopify_app_recommendation_agent
-```
-
-**2. Create a Virtual Environment and Activate It:**
-
-```sh
-python3 -m venv env
-source env/bin/activate
-```
-
-**3. Install Dependencies:**
-
-```sh
-pip install -r requirements.txt
-```
-**4. Configure Environment Variables:**
-
-Create a file named `.env` in the project root with the following content:
-
-```sh
-OPENAI_API_KEY=YourOpenAIKey
-SECRET_KEY=n9L2sJ6XzQ7fJYBvWm3KpXg4TzNcRqV8HsLdPz5MfC2WyGdBhX
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-DB_PATH=../chroma_db
-PORT=8000
 ```
 
 ---
